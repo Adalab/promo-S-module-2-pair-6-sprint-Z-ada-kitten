@@ -46,7 +46,7 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 #### 2.2 Intro a la programación 2:
 
-- [ ] 1. **LISTADO:** Mejora como se guarda la información
+- [x] 1. **LISTADO:** Mejora como se guarda la información
 - [ ] 2. **LISTADO - Bonus:** Nombre de gatitos en mayúsculas
 
 #### 2.3 Condicionales:
