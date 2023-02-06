@@ -15,10 +15,29 @@ if (newForm.classList.contains('collapsed')) {
 } else {
  newForm.classList.add('collapsed');
 }
-
 });
 
+const inputDesc = document.querySelector('.js-input-desc');
+const inputPhoto = document.querySelector('.js-input-photo');
+const inputName = document.querySelector('.js-input-name');
+const labelMessageError = document.querySelector('.js-label-error');
+const btnAdd = document.querySelector('.js-btn-add');
 
+const valueDesc = inputDesc.value;
+const valuePhoto = inputPhoto.value;
+const valueName = inputName.value;
+
+if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+  inputDesc.value = inputDesc
+  //completa el código
+} else {
+  labelMessageError.innerHTML = "¡Uy! parece que has olvidado algo"
+  //completa el código
+}
+
+btnAdd.addEventListener('click', () => {
+  
+});
 
 const descrSearchText = input_search_desc.value;
 
