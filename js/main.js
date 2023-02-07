@@ -28,16 +28,33 @@ const valuePhoto = inputPhoto.value;
 const valueName = inputName.value;
 
 if (valueDesc === '' || valuePhoto === '' || valueName === '') {
-  inputDesc.value = inputDesc
+
+  labelMessageError.innerHTML = "¡Uy! parece que has olvidado algo"
   //completa el código
 } else {
-  labelMessageError.innerHTML = "¡Uy! parece que has olvidado algo"
   //completa el código
 }
 
 btnAdd.addEventListener('click', () => {
   
 });
+const btnCancel = document.querySelector('.js-btn-cancel');
+
+btnCancel.addEventListener('click', (event) => {
+  //console.log('Holiis');
+  event.preventDefault();
+  newForm.classList.add('collapsed');
+});
+
+function showNewCatForm() {
+  newFormElement.classList.remove('collapsed');
+  
+}
+
+
+function hideNewCatForm() {
+  newFormElement.classList.add('collapsed');
+}
 
 const descrSearchText = input_search_desc.value;
 
