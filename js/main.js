@@ -31,7 +31,7 @@ if (valueDesc === '' || valuePhoto === '' || valueName === '') {
   inputDesc.value = inputDesc
   //completa el código
 } else {
-  labelMessageError.innerHTML = "¡Uy! parece que has olvidado algo"
+  labelMessageError.innerHTML
   //completa el código
 }
 
