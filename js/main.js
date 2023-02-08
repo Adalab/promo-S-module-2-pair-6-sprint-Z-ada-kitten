@@ -23,11 +23,17 @@ const inputName = document.querySelector('.js-input-name');
 const labelMessageError = document.querySelector('.js-label-error');
 const btnAdd = document.querySelector('.js-btn-add');
 
-const valueDesc = inputDesc.value;
-const valuePhoto = inputPhoto.value;
-const valueName = inputName.value;
 
-if (valueDesc === '' || valuePhoto === '' || valueName === '') {
+
+
+
+btnAdd.addEventListener('click', addNewKitten);
+function addNewKitten(event) {
+  const valueDesc = inputDesc.value;
+  const valuePhoto = inputPhoto.value;
+  const valueName = inputName.value;
+
+  if (valueDesc === '' || valuePhoto === '' || valueName === '') {
 
   labelMessageError.innerHTML = "¡Uy! parece que has olvidado algo"
   //completa el código
@@ -35,9 +41,15 @@ if (valueDesc === '' || valuePhoto === '' || valueName === '') {
   //completa el código
 }
 
-btnAdd.addEventListener('click', () => {
-  
-});
+  //mueve el código que está dentro del evento
+}
+//const paintKitten = (renderKitten) => {
+
+//}
+
+
+
+
 const btnCancel = document.querySelector('.js-btn-cancel');
 
 btnCancel.addEventListener('click', (event) => {
@@ -58,8 +70,6 @@ function hideNewCatForm() {
 
 const descrSearchText = input_search_desc.value;
 
-/* Agregar el código del li desde HTMl 
-Repetir este proceso por cada gatito */
 const kittenImageOne = 'https://dev.adalab.es/gato-siames.webp';
 const kittenNameOne = 'Anastacio';
 
@@ -87,7 +97,27 @@ const kittenOneContent = `<li class="card">
 if( kittenDescOne.includes(descrSearchText) ) {
  listElement.innerHTML = kittenOneContent;
 }
+//IMPORTANTE; 2.5.3.2-->LISTADO; crear el gatito en HTML;como podemos poner el renderKitten y quitar el innerHTML???
 
+function renderKitten(url, desc, name, race) {
+  const kittenContent = `<li class="card">
+<article>
+  <img
+    class="card_img"
+    src= ${url}
+    alt="gatito"
+    
+  />
+  <h3 class="card_title">${name}</h3>
+  <h4 class="card_race">${race}</h4>
+  <p class="card_description">
+            ${desc}
+   </p>
+</article>
+</li>`
+
+}
+//renderKitten(kittenImageOne, kittenDescOne, kittenNameOne, kittenRaceOne)
 
 const kittenImageTwo = 'https://dev.adalab.es/sphynx-gato.webp';
 const kittenNameTwo = 'Fiona';
