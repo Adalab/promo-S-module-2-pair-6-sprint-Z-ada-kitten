@@ -57,8 +57,8 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 #### 2.4 Eventos:
 
 - [x] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
-- [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
-- [ ] 3. **FORMULARIO:** Cancelar formulario.
+- [x] 2. **FORMULARIO:** Adicionar nuevo gatito.
+- [x] 3. **FORMULARIO:** Cancelar formulario.
 
 #### 2.5 Funciones I:
 
