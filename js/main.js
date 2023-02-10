@@ -114,10 +114,8 @@ const filterKitten = (event) => {
   const descrSearchText = input_search_desc.value;
   const descrSearchRace = input_search_race.value;
   if (descrSearchRace === '' ) {
-    msjBtnSearch.innerHTML = 'no ha rellenado el campo raza';   
+    msjBtnSearch.innerHTML = 'no ha rellenado el campo raza';    
     
-
-    }
 if( kittenData1.desc.includes(descrSearchText) ) {
  listElement.innerHTML = renderKitten(kittenData1);
 }
