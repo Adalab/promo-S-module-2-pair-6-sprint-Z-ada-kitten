@@ -15,6 +15,7 @@ const btnCancel = document.querySelector('.js-btn-cancel');
 const button = document.querySelector('.js-button');
 const btnSearch = document.querySelector('.js-btn-search');
 const msjBtnSearch = document.querySelector('.msj-btn-search');
+
 const kittenData1 = {
   image: 'https://dev.adalab.es/gato-siames.webp',
   name: 'Anastacio',
@@ -38,6 +39,7 @@ const kittenData3 = {
   race: 'Maine Coon',
 };
 
+const kittenDataList = [kittenData1, kittenData2, kittenData3];
 //variable de gato UNO
 // const kittenImageOne = 'https://dev.adalab.es/gato-siames.webp';
 // const kittenNameOne = 'Anastacio';
@@ -113,9 +115,13 @@ const filterKitten = (event) => {
   event.preventDefault();
   const descrSearchText = input_search_desc.value;
   const descrSearchRace = input_search_race.value;
+  if (descrSearchText === '')   {
+    msjBtnSearch.innerHTML += 'no se ha rellenado el campo de descripción'
+  }
   if (descrSearchRace === '' ) {
     msjBtnSearch.innerHTML = 'no ha rellenado el campo raza';    
-    
+  
+
 if( kittenData1.desc.includes(descrSearchText) ) {
  listElement.innerHTML = renderKitten(kittenData1);
 }
@@ -128,7 +134,7 @@ if( kittenData3.desc.includes(descrSearchText) ) {
  listElement.innerHTML += renderKitten(kittenData3);
 }
  }
-
+}
 
 const cancelNewKitten = (event) => {
   event.preventDefault();
