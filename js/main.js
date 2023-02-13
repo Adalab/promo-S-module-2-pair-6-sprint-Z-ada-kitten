@@ -40,33 +40,19 @@ const kittenData3 = {
 };
 
 const kittenDataList = [kittenData1, kittenData2, kittenData3];
-//variable de gato UNO
-// const kittenImageOne = 'https://dev.adalab.es/gato-siames.webp';
-// const kittenNameOne = 'Anastacio';
-// const kittenDescOne =
-//   ' Porte elegante, risueño, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.';
-// const kittenRaceOne = 'Siamés';
-
-//variable de gato DOS
-// const kittenImageTwo = 'https://dev.adalab.es/sphynx-gato.webp';
-// const kittenNameTwo = 'Fiona';
-// const kittenDescTwo =
-//   'Produce fascinación y curiosidad. Exótico, risueño, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo. ';
-// const kittenRaceTwo = 'Sphynx';
-
-//variable de gato TRES
-// const kittenImageThree = 'https://dev.adalab.es/maine-coon-cat.webp"';
-// const kittenNameThree = 'Cielo';
-// const kittenDescThree =
-//   'Tienen la cabeza cuadrada y los ojos simétricos, risueño, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta. ';
-// const kittenRaceThree = 'Maine Coon';
-
 
 // ---------------------------ESTAS SON FUNCIONES-------------------- 
 
+function renderkittenList (kittenDataList) {
+
+  for (let i = 0; i < kittenDataList.length; i++) {
+    listElement.innerHTML += renderKitten(kittenDataList[i])
+  }
+}
+
 function renderKitten(kitten) {
-  
-  const kittenContent = `<li class="card">
+
+const kittenContent = `<li class="card">
 <article>
   <img
     class="card_img"
@@ -115,12 +101,21 @@ const filterKitten = (event) => {
   event.preventDefault();
   const descrSearchText = input_search_desc.value;
   const descrSearchRace = input_search_race.value;
+
+
   if (descrSearchText === '')   {
     msjBtnSearch.innerHTML += 'no se ha rellenado el campo de descripción'
   }
   if (descrSearchRace === '' ) {
     msjBtnSearch.innerHTML = 'no ha rellenado el campo raza';    
-  
+
+  for (const kittenItem of kittenDataList) {
+    //console.log(kittenData3.desc);
+    kittenData1.innerHTML = `<li> ${kittenItem} </li>`;
+    kittenData2.innerHTML = `<li> ${kittenItem} </li>`;
+    kittenData3.innerHTML = `<li> ${kittenItem} </li>`;
+
+  } 
 
 if( kittenData1.desc.includes(descrSearchText) ) {
  listElement.innerHTML = renderKitten(kittenData1);
